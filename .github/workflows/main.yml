@@ -15,6 +15,7 @@ jobs:
       - name: Instalar Logstash
         run: |       
              wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elastic-keyring.gpg
+             sudo apt-get install apt-transport-https
              sudo apt-get update && sudo apt-get install logstash
 
       - name: Validar logstash.conf
